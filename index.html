@@ -140,7 +140,6 @@
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <audio id="celebrationSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_a45f74b39e.mp3" preload="auto"></audio>
 </head>
 <body>
   <div class="landing" id="landing">
@@ -191,7 +190,6 @@
 
       if (input === q.answer.toLowerCase()) {
         confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-        document.getElementById('celebrationSound').play();
         const codeSpan = document.createElement('span');
         codeSpan.className = 'correct tip-reveal';
         codeSpan.innerHTML = `🧩 Aqui está a tua dica: <strong>${q.tip || '🎁'}</strong>`;
