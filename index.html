@@ -176,7 +176,10 @@
         const codeSpan = document.createElement('span');
         codeSpan.className = 'correct tip-reveal';
         codeSpan.innerHTML = `🧩 Aqui está a tua dica: <strong>Ganhei a medalha olímpica prateada em 2012 e de bronze nos jogos de 2020</strong>`;
-        document.getElementById('codePart').innerHTML = codeSpan.outerHTML;
+        document.getElementById('codePart').innerHTML = codeSpan.outerHTML
+        submitButton.disabled = true;
+        submitButton.style.opacity = '0.6';
+        submitButton.style.cursor = 'not-allowed';
 
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
