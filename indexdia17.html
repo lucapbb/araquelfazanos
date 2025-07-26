@@ -233,9 +233,6 @@
 
     function checkAnswer() {
       const submitButton = document.querySelector('#quizContainer button[onclick="checkAnswer()"]');
-      submitButton.disabled = true;
-      submitButton.style.opacity = '0.6';
-      submitButton.style.cursor = 'not-allowed';
       const input = document.getElementById('answerInput').value.trim().toLowerCase();
       const q = question;
       if (!q) return;
@@ -253,6 +250,9 @@
         listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 17-08-2025: <span>${q.tip}</span></div>`;
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
+        submitButton.disabled = true;
+        submitButton.style.opacity = '0.6';
+        submitButton.style.cursor = 'not-allowed';
       } else {
         document.getElementById('codePart').innerHTML = `<span class='incorrect'>❌ O Noronha está perto de receber a prenda, try again</span>`;
         document.getElementById('errorSound').play().catch(() => {});
