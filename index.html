@@ -226,9 +226,7 @@
 
     function checkAnswer() {
       const submitButton = document.querySelector('#quizContainer button[onclick="checkAnswer()"]');
-      submitButton.disabled = true;
-      submitButton.style.opacity = '0.6';
-      submitButton.style.cursor = 'not-allowed';
+  
       const input = document.getElementById('answerInput').value.trim().toLowerCase();
       if (input === question.answer.toLowerCase()) {
         confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
@@ -243,6 +241,14 @@
         listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 18-05-2025: <span>Ganhei a medalha olímpica prateada em 2012 e de bronze nos jogos de 2020</span></div>`;
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
+        // ✅ Desativar botão SOMENTE após acerto
+        submitButton.disabled = true;
+        submitButton.style.opacity = '0.6';
+        submitButton.style.cursor = 'not-allowed';
+} else {
+  document.getElementById('codePart').innerHTML = `<span class='incorrect'>❌ O Noronha está perto de receber a prenda, try again</span>`;
+  document.getElementById('errorSound').play().catch(() => {});
+}
       } else {
         document.getElementById('codePart').innerHTML = `<span class='incorrect'>❌ O Noronha está perto de receber a prenda, try again</span>`;
         document.getElementById('errorSound').play().catch(() => {});
