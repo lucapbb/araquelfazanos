@@ -168,6 +168,10 @@
     };
 
     function checkAnswer() {
+      const submitButton = document.querySelector('#quizContainer button[onclick="checkAnswer()"]');
+      submitButton.disabled = true;
+      submitButton.style.opacity = '0.6';
+      submitButton.style.cursor = 'not-allowed';
       const input = document.getElementById('answerInput').value.trim().toLowerCase();
       if (input === question.answer.toLowerCase()) {
         confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
