@@ -172,7 +172,7 @@
   </style>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <audio id="celebrationSound" src="https://cdn.pixabay.com/audio/2022/03/18/audio_78595cc04a.mp3" preload="auto"></audio>
-  <audio id="errorSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_bdfad3b1dc.mp3" preload="auto"></audio>
+  <audio id="errorSound" src="errorSound.mp3" preload="auto"></audio>
 
 </head>
 <body>
@@ -247,6 +247,7 @@
         document.getElementById('historyContainer').style.display = 'block';
       } else {
         document.getElementById('codePart').innerHTML = `<span class='incorrect'>❌ O Noronha está perto de receber a prenda, try again</span>`;
+        document.getElementById('errorSound').play().catch(() => {});
       }
     }
 
@@ -294,6 +295,7 @@
         result.style.color = '#2e8b57';
       } else {
         result.innerHTML = '❌ Hmm... tenta outra vez!';
+        document.getElementById('errorSound').play().catch(() => {});
         result.style.color = '#c0392b';
       }
     }
