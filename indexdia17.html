@@ -175,6 +175,10 @@
     const today = new Date().toISOString().split('T')[0];
 
     function checkAnswer() {
+      const submitButton = document.querySelector('#quizContainer button[onclick="checkAnswer()"]');
+      submitButton.disabled = true;
+      submitButton.style.opacity = '0.6';
+      submitButton.style.cursor = 'not-allowed';
       const input = document.getElementById('answerInput').value.trim().toLowerCase();
       const q = question;
       if (!q) return;
