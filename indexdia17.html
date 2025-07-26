@@ -255,6 +255,8 @@
         document.getElementById('historyContainer').style.display = 'block';
       } else {
         document.getElementById('codePart').innerHTML = `<span class='incorrect'>❌ O Noronha está perto de receber a prenda, try again</span>`;
+        document.getElementById('errorSound').play().catch(() => {});
+
       }
     }
 
@@ -311,7 +313,8 @@
         result.innerHTML = '🎉 Correto! Agora sim, a prenda é tua!';
         result.style.color = '#2e8b57';
       } else {
-        result.innerHTML = '❌ Hmm... tenta outra vez!';
+        result.innerHTML = '❌ Errado, bora tenta de novo';
+        document.getElementById('errorSound').play().catch(() => {});
         result.style.color = '#c0392b';
       }
     }
