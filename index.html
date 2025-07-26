@@ -166,20 +166,17 @@
   </div>
 
   <script>
-    const questions = {
-      "2025-07-25": {
-        question: "What is the capital of France?",
-        answer: "paris",
-        tip: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ZOBKlZKFcsYQBdvyf6cHA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
-      },
-      "2025-07-26": { question: "What color is the sky on a clear day?", answer: "blue" }
-    };
+    const question = {
+  question: "O teu namorado jogou num clube de futebol quando tinha 5 anos, qual?",
+  answer: "benfica",
+  tip: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ZOBKlZKFcsYQBdvyf6cHA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+};
 
     const today = new Date().toISOString().split('T')[0];
 
     function checkAnswer() {
       const input = document.getElementById('answerInput').value.trim().toLowerCase();
-      const q = questions[today];
+      const q = question;
       if (!q) return;
 
       if (input === q.answer.toLowerCase()) {
@@ -201,18 +198,18 @@
     }
 
     function loadQuestion() {
-      const q = questions[today];
-      const questionText = document.getElementById('questionText');
-      if (!q) {
-        if (questionText) questionText.innerText = "🔒 Nenhuma pergunta disponível para hoje. Volta amanhã!";
-        const input = document.getElementById('answerInput');
-        if (input) input.style.display = 'none';
-        const button = document.querySelector('#quizContainer button');
-        if (button) button.style.display = 'none';
-      } else {
-        if (questionText) questionText.innerText = q.question;
-      }
-    }
+  const q = question;
+  const questionText = document.getElementById('questionText');
+  if (!q) {
+    if (questionText) questionText.innerText = "🔒 Nenhuma pergunta disponível para hoje. Volta amanhã!";
+    const input = document.getElementById('answerInput');
+    if (input) input.style.display = 'none';
+    const button = document.querySelector('#quizContainer button');
+    if (button) button.style.display = 'none';
+  } else {
+    if (questionText) questionText.innerText = q.question;
+  }
+}
 
     function startQuiz() {
       document.getElementById('landing').style.display = 'none';
@@ -263,3 +260,4 @@
   </script>
 </body>
 </html>
+
