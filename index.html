@@ -238,7 +238,7 @@
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        codeSpan.innerHTML = `🧩 Aqui está a tua dica: <a href="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" target="_blank">🔗 Clica aqui para ver a imagem</a>`; // EDITAR
+        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 19-08-2025:<br><img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" alt="Pista do dia 19" style="max-width:100%; border-radius:12px; margin-top:10px;"></div>`; // EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
         submitButton.disabled = true;
