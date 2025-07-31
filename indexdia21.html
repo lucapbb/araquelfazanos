@@ -203,7 +203,7 @@
 
   <div class="container" id="quizContainer">
     <button onclick="goHome()" style="position: absolute; left: 2rem; top: 2rem; background-color: #fff3e0; color: #ff6f61; border: none; padding: 0.5rem 1rem; border-radius: 5px; font-size: 0.9rem; cursor: pointer;">← Início</button>
-    <h1>Pista 4 🧩</h1> <!-- EDITAR -->
+    <h1>Pista 5 🧩</h1> <!-- EDITAR -->
     <div class="question-area">
       <div class="question" id="questionText" style="margin-bottom: 1.5rem;"></div>
       <input type="text" id="answerInput" style="margin-bottom: 1.5rem;" placeholder="Escreve a tua resposta aqui...">
@@ -261,8 +261,8 @@
 
   <script>
     const question = {
-      question: "Qual foi o primeiro filme que vimos juntos na casa da minha mãe?", // Mudar
-      answer: "Smurfs",
+      question: "teste", // Mudar
+      answer: "teste",
     };
 
     function checkAnswer() {
@@ -273,12 +273,12 @@
         document.getElementById('celebrationSound').play();
         const codeSpan = document.createElement('span');
         codeSpan.className = 'correct tip-reveal';
-        codeSpan.innerHTML = `🧩 Aqui está a tua dica:<br><img src="https://pbs.twimg.com/media/DHJFZjCWAAAWMHN.jpg" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;">`; // EDITAR
+        codeSpan.innerHTML = `🧩 Aqui está a tua dica: <strong>Hangover Part II - 40m:40s</strong>`;
         //EDITAR
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 18-05-2025: <span>Hangover Part II - 40m:40s</span></div>`;
+        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 21-05-2025: <span>Hangover Part II - 40m:40s</span></div>`;
        //EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
