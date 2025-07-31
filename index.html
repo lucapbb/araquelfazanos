@@ -265,11 +265,13 @@
         document.getElementById('celebrationSound').play();
         const codeSpan = document.createElement('span');
         codeSpan.className = 'correct tip-reveal';
-        codeSpan.innerHTML = `🧩 Aqui está a tua dica:<br><img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;">`; // EDITAR
+        codeSpan.innerHTML = `🧩 Aqui está a tua dica:<br><img src="https://pbs.twimg.com/media/DHJFZjCWAAAWMHN.jpg" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;">`; // EDITAR
+        //EDITAR
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 20-08-2025:<br><img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" alt="Pista do dia 19" style="max-width:250px; border-radius:12px; margin-top:10px;"></div>`;  // EDITAR
+        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 20-08-2025:<br><img src="https://pbs.twimg.com/media/DHJFZjCWAAAWMHN.jpg" alt="Pista do dia 19" style="max-width:250px; border-radius:12px; margin-top:10px;"></div>`;  // EDITAR
+       //EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
         submitButton.disabled = true;
