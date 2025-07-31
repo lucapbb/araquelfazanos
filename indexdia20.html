@@ -192,7 +192,7 @@
         – Caso chegues ao último dia sem a resposta, dou a prenda ao Noronha 🎁
       </p>
     </div>
-    <button class="start-button" id="startQuizBtn" onclick="startQuiz()">Pergunta - Dia 19 de Agosto 🎉</button> <!--- EDITAR -->
+    <button class="start-button" id="startQuizBtn" onclick="startQuiz()">Pergunta - Dia 20 de Agosto 🎉</button> <!--- EDITAR -->
     <div style="margin-top: 2rem; text-align: center;">
       <h3 style="margin-bottom: 0.5rem;">Adivinha a tua prenda</h3>
       <input type="text" id="giftGuess" style="padding: 0.7rem; width: 320px; max-width: 90%; border-radius: 10px; border: 2px solid #4caf50; font-size: 1rem; background-color: #fff; color: #333; font-family: 'Poppins', sans-serif;">
@@ -216,13 +216,18 @@
     <h2>📚 Histórico de Pistas</h2>
     <ul id="tipHistory" style="list-style: none; padding-left: 0;">
   <li><div style='margin-bottom: 1rem;'>📅 17-08-2025: <span><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ZOBKlZKFcsYQBdvyf6cHA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></span></div></li>
-<li><<div style='margin-bottom: 1rem;'>📅 18-05-2025: <span>"Ganhei a medalha olímpica prateada em 2012 e de bronze nos jogos de 2020"</span></li></div>
+<li><<div style='margin-bottom: 1rem;'>📅 18-05-2025: <span>"Ganhei a medalha olímpica prateada em 2012 e de bronze nos jogos de 2020"</span></li></div> 
+  <li><div style='margin-bottom: 1rem;'>📅 20-08-2025:<br><img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" alt="Pista do dia 19" style="max-width:250px; border-radius:12px; margin-top:10px;"></div></span></li></div> 
+
+  
+  <!-- ADICIONAR -->
+  
     </ul>
   </div>
 
   <script>
     const question = {
-      question: "No início da relação, havia um famoso que te proibía explicitamente de estar, quem?",
+      question: "No início da relação, havia um famoso que te proibía explicitamente de estar, quem?", //Mudar
       answer: "Gabriel Medina",
     };
 
@@ -238,7 +243,7 @@
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 19-08-2025:<br><img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" alt="Pista do dia 19" style="max-width:250px; border-radius:12px; margin-top:10px;"></div>`;  // EDITAR
+        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 20-08-2025:<br><img src="https://fsp.usp.br/eccco/wp-content/uploads/2022/11/matheus-cenali-wXuzS9xR49M-unsplash-1200x900.jpg" alt="Pista do dia 19" style="max-width:250px; border-radius:12px; margin-top:10px;"></div>`;  // EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
         submitButton.disabled = true;
@@ -290,7 +295,7 @@
       if (guess === 'parque dos monges') {
         confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
         document.getElementById('celebrationSound').play();
-        result.innerHTML = '🎉 Acertaste! No dia 7 de Julho, vamos para passar uma noite no Parque dos Monges em Alcobaça!';
+        result.innerHTML = '🎉 Acertaste! No dia 7 de Setembro, vamos para passar uma noite no Parque dos Monges em Alcobaça!';
         result.style.color = '#2e8b57';
       } else {
         result.innerHTML = '❌ Errado, bora tenta outra vez!';
