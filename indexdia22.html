@@ -192,7 +192,7 @@
         – Caso chegues ao último dia sem a resposta, dou a prenda ao Noronha 🎁
       </p>
     </div>
-    <button class="start-button" id="startQuizBtn" onclick="startQuiz()">Pergunta - Dia 21 de Agosto 🎉</button> <!--- EDITAR -->
+    <button class="start-button" id="startQuizBtn" onclick="startQuiz()">Pergunta - Dia 22 de Agosto 🎉</button> <!--- EDITAR -->
     <div style="margin-top: 2rem; text-align: center;">
       <h3 style="margin-bottom: 0.5rem;">Adivinha a tua prenda</h3>
       <input type="text" id="giftGuess" style="padding: 0.7rem; width: 320px; max-width: 90%; border-radius: 10px; border: 2px solid #4caf50; font-size: 1rem; background-color: #fff; color: #333; font-family: 'Poppins', sans-serif;">
@@ -203,7 +203,7 @@
 
   <div class="container" id="quizContainer">
     <button onclick="goHome()" style="position: absolute; left: 2rem; top: 2rem; background-color: #fff3e0; color: #ff6f61; border: none; padding: 0.5rem 1rem; border-radius: 5px; font-size: 0.9rem; cursor: pointer;">← Início</button>
-    <h1>Pista 5 🧩</h1> <!-- EDITAR -->
+    <h1>Pista 6 🧩</h1> <!-- EDITAR -->
     <div class="question-area">
       <div class="question" id="questionText" style="margin-bottom: 1.5rem;"></div>
       <input type="text" id="answerInput" style="margin-bottom: 1.5rem;" placeholder="Escreve a tua resposta aqui...">
@@ -252,6 +252,14 @@
            style="max-width: 250px; border-radius: 12px; margin-top: 10px; display: block; margin-left: auto; margin-right: auto;">
     </div>
   </li>
+     
+   <li>
+    <div style='margin-bottom: 1rem;'>
+      📅 21-05-2025:
+      <span>"Hangover Part II - 40m:40s"</span>
+    </div>
+  </li>
+
 </ul>
   
   <!-- ADICIONAR -->
@@ -261,8 +269,8 @@
 
   <script>
     const question = {
-      question: "teste", // Mudar
-      answer: "teste",
+      question: "Qual o sítio que mais gostei de visitar na Madeira", // Mudar
+      answer: "Seixal",
     };
 
     function checkAnswer() {
@@ -278,7 +286,7 @@
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 21-05-2025: <span>Hangover Part II - 40m:40s</span></div>`;
+        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 21-05-2025: <span></span></div>`;
        //EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
