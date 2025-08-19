@@ -281,12 +281,12 @@
         document.getElementById('celebrationSound').play();
         const codeSpan = document.createElement('span');
         codeSpan.className = 'correct tip-reveal';
-        codeSpan.innerHTML = `🧩 Aqui está a tua dica: <strong>src="tiktok.png"</strong>`;
+        codeSpan.innerHTML = `🧩 Aqui está a tua dica: <strong><img src="tiktok.png" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;"></strong>`;
         //EDITAR
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 22-05-2025:src="tiktok.png"<span></span></div>`;
+        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 22-05-2025: <img src="tiktok.png" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;"> "<span></span></div>`;
        //EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
