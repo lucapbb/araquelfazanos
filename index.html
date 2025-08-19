@@ -281,12 +281,20 @@
         document.getElementById('celebrationSound').play();
         const codeSpan = document.createElement('span');
         codeSpan.className = 'correct tip-reveal';
-        codeSpan.innerHTML = `🧩 Aqui está a tua dica: <strong><img src="0b9de632-6057-40d5-92ec-e3880707b9c8.png" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;"></strong>`;
+codeSpan.innerHTML = `🧩 Aqui está a tua dica: 
+  <strong>
+    <img src="tktk.png" alt="Dica visual" 
+         style="max-width:250px; border-radius:12px; margin-top:10px; display:block; margin-left:auto; margin-right:auto;">
+  </strong>`;
         //EDITAR
         document.getElementById('codePart').innerHTML = codeSpan.outerHTML
         const historyList = document.getElementById('tipHistory');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<div style='margin-bottom: 1rem;'>📅 22-05-2025: <img src="0b9de632-6057-40d5-92ec-e3880707b9c8.png" alt="Dica visual" style="max-width:250px; border-radius:12px; margin-top:10px;"> "<span></span></div>`;
+        listItem.innerHTML = `<div style='margin-bottom: 1rem; text-align: center;'>
+        📅 22-05-2025:<br>
+        <img src="tktk.png" alt="Dica visual" 
+         style="max-width:250px; border-radius:12px; margin-top:10px; display:block; margin-left:auto; margin-right:auto;">
+        </div>`;
        //EDITAR
         historyList.appendChild(listItem);
         document.getElementById('historyContainer').style.display = 'block';
